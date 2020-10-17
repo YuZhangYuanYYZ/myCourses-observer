@@ -19,6 +19,7 @@
         </div> -->
         <!-- abc -->
         <input type="text" v-model="message" />  {{message}}
+        <div v-html="contentTitle">123</div>
     </div>
 </body>
 <script>
@@ -27,12 +28,7 @@
         el: "#app",
         data: {
             message: "数据",
-            // mydata:""
-            // obj:{
-            //     obj:{
-
-            //     }
-            // }
+            contentTitle:"hello world"
         }
     })
 

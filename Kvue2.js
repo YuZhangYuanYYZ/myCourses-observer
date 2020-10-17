@@ -49,6 +49,14 @@ class Vue extends EventTarget{
                             this._data[attValue] = e.target.value;
                         })
                     }
+
+                    if(attrName==="v-html"){
+                        //attName "v-html"
+                        //attValue "contentTitle"
+                        let htmlContent = this._data[attValue];
+                        console.log("node,node.innerHTML",node,node.innerHTML)
+                        node.innerHTML = htmlContent;
+                    }
                 })
 
                 if(node.childNodes.length>0){
