@@ -1,5 +1,7 @@
-export default class TeacherObserver extends EventTarget{
+import Store from "./Store.js";
+export default class TeacherObserver extends Store{
     constructor(name){
+        super();
         this.name = name;
         this.addEventListener("observerUpdate",e=>{
             let element = document.getElementById("teacher")

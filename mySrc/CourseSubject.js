@@ -1,5 +1,7 @@
-export default class CourseSubject extends EventTarget{
+import Store from "./Store.js"
+export default class CourseSubject extends Store{
     constructor(courses){
+        super();
         this.courses = courses ;
         this.observerList = [];
     }
@@ -9,7 +11,7 @@ export default class CourseSubject extends EventTarget{
     setCourses(newCourses){
         this.courses = newCourses;
         this.dispatchEvent(new CustomEvent("observerUpdate",{
-            detail:newCourses
+            detail:this.courses
         }));
     }
     
