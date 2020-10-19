@@ -1,5 +1,6 @@
 export default class StudentCourses extends EventTarget{
     constructor(name){
+        super();
         this.name = name;
         this.addEventListener("observerUpdate",e=>{
             let element = document.getElementById("student")
@@ -11,9 +12,6 @@ export default class StudentCourses extends EventTarget{
         this.update(newCourses);
     }
     update(newCourses){
-       
         console.log(this.name,newCourses)
     }
 }
-
-// module.exports = StudentCourses;
