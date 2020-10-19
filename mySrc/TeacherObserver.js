@@ -1,5 +1,6 @@
 export default class TeacherObserver extends EventTarget{
     constructor(name){
+        super();
         this.name = name;
         this.addEventListener("observerUpdate",e=>{
             let element = document.getElementById("teacher")
@@ -14,5 +15,3 @@ export default class TeacherObserver extends EventTarget{
         console.log(this.name,newCourses) ;
     }
 }
-
-// module.exports = TeacherObserver;
